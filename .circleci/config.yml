@@ -1,0 +1,98 @@
+version: 2
+jobs:
+
+  integrate:
+    # working_directory: /app
+    # The primary container is an instance of the first list image listed.
+    # Your build commands run in this container.
+    docker:
+      - image: circleci/python:3.6-jessie-browsers
+    steps:
+      - checkout
+      - run:
+          name: Environment
+          command: |
+            git --version
+            env | sort | grep "CIRCLE"
+      - run:
+          name: Intro
+          command: ./play --manuscript .circleci/manuscript.yml --part gitintro
+      - run:
+          name: Swap to target branch and test integration
+          command: ./play --manuscript .circleci/manuscript.yml --part integrate
+
+  build:
+    # working_directory: /app
+    docker:
+      - image: circleci/python:3.6-jessie-browsers
+    steps:
+      - checkout
+      - run:
+          name: Swap to target branch and integrate
+          command: ./play --manuscript .circleci/manuscript.yml --part integrate
+      - run:
+          name: Where am I
+          command: |
+            pwd
+            ls -a
+            git rev-parse --short HEAD
+
+  deliver:
+    # working_directory: /app
+    docker:
+      - image: circleci/python:3.6-jessie-browsers
+    steps:
+      - checkout
+      - run:
+          command: |
+            git config --global user.email "spam@spammerino.com"
+            git config --global user.name "test McTest"
+      #- run: sudo pip3 install -r ./requirements.txt
+      #- run: python3 ./test.py
+      - run:
+          name: Intro
+          command: ./play --manuscript .circleci/manuscript.yml --part gitintro
+      - run:
+          name: integrate
+          command: ./play --manuscript .circleci/manuscript.yml --part integrate
+      - run:
+          name: Deliver
+          command: ./play --manuscript .circleci/manuscript.yml --part deliver
+  dev_test:
+    # working_directory: /app
+    docker:
+      # specify the version you desire here
+      - image: circleci/python:3.6-jessie-browsers
+    steps:
+      - checkout
+      - run:
+          name: Git setup
+          command: |
+            sudo git config --global user.email "spam@spammerino.com"
+            sudo git config --global user.name "test McTest"
+      #- run: sudo pip3 install -r /home/circleci/project/requirements.txt
+      - run:
+          name: Running test 
+          command: |
+      #      sudo python3 /home/circleci/project/test.py
+
+workflows:
+  version: 2
+  timereg_phlow:
+    jobs:
+      - integrate:
+          filters:
+            branches:
+              only:
+                - /ready\/.+/
+      - build:
+          requires:
+            - integrate
+      - deliver:
+          requires:
+            - build
+      - dev_test:
+          filters:
+            branches:
+              only:
+                - /\d+\-.+/
