@@ -5,7 +5,7 @@
 
 ## Disclaimer
 
-This is made on a unix based system and made for a unix based system, I cannot offer support for anything else. If you dont have a unix based system, I recommend you strongly to get one!
+This is made on a unix based system and made for a unix based system, I cannot offer support for anything else. If you dont have a unix based system, I recommend you strongly to get one! Either on a virtual machine, a VPS or even dual boot / full linux install. I can recommend Ubuntu as a good start.
 
 ## Installation
 
