@@ -1,8 +1,8 @@
 FROM python:3
 
-COPY main.py /home/main.py
-COPY custom_json.py /home/custom_json.py
-COPY requirements.txt /home/requirements.txt
+COPY /Task-1/main.py /home/main.py
+COPY /Task-1/custom_json.py /home/custom_json.py
+COPY /Task-1/requirements.txt /home/requirements.txt
 
 RUN chmod 755 /home/main.py
 RUN pip install -r /home/requirements.txt
