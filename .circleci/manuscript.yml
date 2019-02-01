@@ -46,7 +46,7 @@ manuscript:
       lines:
         - run:
             caption:
-            command: git remote add ghtoken https://$GHTOKEN_PROLIKE@github.com/$PLAY_GITREPO.git
+            command: git remote add ghtoken https://$GHTOKEN@github.com/$PLAY_GITREPO.git
             die_on_err: yes
         - run:
             caption:
@@ -64,11 +64,11 @@ manuscript:
       lines:
         - run:
             caption:
-            command: git config user.name "Circle CI by @Prolike"
+            command: git config user.name "Circle CI by @dcarl"
             die_on_err: yes
         - run:
             caption:
-            command: git config user.email "circleci@prolike.io"
+            command: git config user.email "circleci@dcarl.me"
             die_on_err: yes
         - run:
             command: git config --global push.default simple
