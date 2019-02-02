@@ -13,7 +13,7 @@ This is made on a unix based system and made for a unix based system, I cannot o
 
 I would do it this way to run it on you local computer.
 
-```wget https://github.com/DavidCarl/Databases_Course/raw/master/Task-1/Task-1.zip```
+```wget https://github.com/DavidCarl/Database_Course/raw/master/Task-1/Task-1.zip```
 
 use your favorite linux zip tool! I use the following
 
@@ -22,11 +22,11 @@ use your favorite linux zip tool! I use the following
 See usage for how to use it!
 
 
-### Docker
+#### Script
 
 First download this script, I attached a command on 1 way to do it.
 
-```wget https://github.com/DavidCarl/Databases_Course/raw/master/Task-1/docker_script.sh```
+```wget https://github.com/DavidCarl/Database_Course/raw/master/Task-1/docker_script.sh```
 
 You should then run this command on it
 
@@ -37,6 +37,22 @@ now you can run the script like this
 ```./docker_script.sh```
 
 This creates a file in your current directory called docker.db. It also runs my application through Docker so you dont need to install anything.
+
+See usage for how to use it!
+
+#### Manual commands
+
+First you got to 
+
+```touch docker.db``` 
+
+and after that you can run the following command 
+
+```docker run -v $PWD/docker.db/:/home/simple.db davidcarl/database_task_1:latest python ./main.py``` 
+
+this way you are gonna write the application specific rommands right after ./main.py
+
+Unless you know what you are doing with Docker I just recommend the script I made.
 
 See usage for how to use it!
 
