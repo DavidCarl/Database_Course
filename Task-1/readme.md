@@ -48,7 +48,7 @@ First you got to
 
 and after that you can run the following command 
 
-```docker run -v $PWD/docker.db/:/home/simple.db davidcarl/database_task_1:latest python ./main.py``` 
+```docker run -v $PWD/docker.db/:/home/simple.db davidcarl/database_course:Task-1 python ./main.py``` 
 
 this way you are gonna write the application specific rommands right after ./main.py
 
