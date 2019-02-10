@@ -9,7 +9,15 @@ This is made on a unix based system and made for a unix based system, I cannot o
 
 ## Installation
 
-### Local
+This requires a install of mongoDB, I used the provided docker image for it.
+
+### MongoDB
+
+I would follow the guide that the teacher has in hints part of the assignment.
+
+Only thing to recognise that is I use the name ```tweet``` for my database and ```training``` for my collection.
+
+### Python
 
 I would do it this way to run it on you local computer.
 
