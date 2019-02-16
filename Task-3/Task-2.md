@@ -12,6 +12,15 @@ I havent touched the queries or the results from last week so its as new.
 ```
 Amount of unique users: 659774
 ```
+#### Question to query
+* Does it solve the problem, and if not, explain why
+    It does
+* If you were able to get the queries to work in your setup (using a different programming language), and if not, what was the problem.
+    It got this to work!
+* Any suggestion from your own solution you would like to point out for inspiration
+    Very easy
+* If there was something in this solution which you envy
+    no
 
 ### Question 2
 #### Query
@@ -37,6 +46,15 @@ Amount of unique users: 659774
  {'_id': 'keza34', 'count': 211},
  {'_id': 'TraceyHewins', 'count': 202}]
 ```
+#### Question to query
+* Does it solve the problem, and if not, explain why
+    It does
+* If you were able to get the queries to work in your setup (using a different programming language), and if not, what was the problem.
+    It got this to work!
+* Any suggestion from your own solution you would like to point out for inspiration
+    Very easy
+* If there was something in this solution which you envy
+    no
 
 ### Query 3
 #### Query
@@ -47,6 +65,15 @@ Amount of unique users: 659774
 ```
 Got no answer for this question!
 ```
+#### Question to query
+* Does it solve the problem, and if not, explain why
+    It does not because I couldnt figure it out so I choose not to keep trying.
+* If you were able to get the queries to work in your setup (using a different programming language), and if not, what was the problem.
+    Didnt wanna use hundreds of hours on doing it.
+* Any suggestion from your own solution you would like to point out for inspiration
+    It got a print statement!
+* If there was something in this solution which you envy
+    It got a print statement!
 
 ### Query 4
 #### Query
@@ -72,7 +99,16 @@ Got no answer for this question!
  {'_id': 'DarkPiano', 'count': 236}]
 
 ```
-
+#### Question to query
+* Does it solve the problem, and if not, explain why
+    It does
+* If you were able to get the queries to work in your setup (using a different programming language), and if not, what was the problem.
+    It got this to work!
+* Any suggestion from your own solution you would like to point out for inspiration
+    Very easy
+* If there was something in this solution which you envy
+    no
+    
 ### Query 5
 #### Query
 ```
@@ -114,3 +150,12 @@ Top 5 positive:
 {'_id': 'tsarnick', 'count': 212}
 {'_id': 'keza34', 'count': 211}
 ```
+#### Question to query
+* Does it solve the problem, and if not, explain why
+    It does
+* If you were able to get the queries to work in your setup (using a different programming language), and if not, what was the problem.
+    It got this to work!
+* Any suggestion from your own solution you would like to point out for inspiration
+    Very easy
+* If there was something in this solution which you envy
+    no
