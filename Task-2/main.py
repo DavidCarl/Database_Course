@@ -25,7 +25,7 @@ def question2():
         {"$sort": SON([("count", -1), ("user", -1)])},
         {"$limit": 10}
     ]
-    pprint(list(db.training.aggregate(pipeline)))
+    pprint(list(training.aggregate(pipeline)))
 
 def question3():
     print('\nQuestion 3')
@@ -38,7 +38,7 @@ def question4():
         {"$sort": SON([("count", -1), ("user", -1)])},
         {"$limit": 10}
     ]
-    pprint(list(db.training.aggregate(pipeline, session=None)))
+    pprint(list(training.aggregate(pipeline, session=None)))
 
 
 def question5():
@@ -50,7 +50,7 @@ def question5():
         {"$sort": SON([("count", -1), ("user", -1)])},
         {"$limit": 5}
     ]
-    rs = db.training.aggregate(pipeline)
+    rs = training.aggregate(pipeline)
     fprint(rs)
     print('\n')
 
@@ -61,7 +61,7 @@ def question5():
         {"$sort": SON([("count", -1), ("user", -1)])},
         {"$limit": 5}
     ]
-    rs = db.training.aggregate(pipeline)
+    rs = training.aggregate(pipeline)
     fprint(rs)
 
     

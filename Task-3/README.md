@@ -4,7 +4,8 @@
 ### www.dcarl.me
 
 ## Last weeks Task
-\#Querys here!
+
+[See the answer here!](Task-2.md)
 
 ## This weeks Task
 Model | Atomicity | Sharding |Indexes |Large Number of Collections | Collection Contains Large Number of Small Documents
