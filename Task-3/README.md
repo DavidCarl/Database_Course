@@ -1,7 +1,8 @@
 # Task-2
 
-### Made by David Carl
+### Made by David Carl & Tjalfe Møller
 ### www.dcarl.me
+
 
 ## Last weeks Task
 
