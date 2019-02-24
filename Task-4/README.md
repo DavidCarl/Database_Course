@@ -64,4 +64,4 @@ To make a dump you can run the following command
 We have used the mysqldump tool that is build into MySQL to perform our dump. The reason we choose this is because it is build into MySQL so everyone should have the ability to use the same command as we did.
 
 To load a dump you can run the following command, it is required you have a database called classicmodels!
-```docker exec -i mysql classicmodels < dump.sql```
+```docker exec -i mysql mysql -u root --password=root classicmodels < dump.sql```
