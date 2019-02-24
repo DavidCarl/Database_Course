@@ -46,13 +46,13 @@ For us its looking like this ```mysql -u root -p``` then it request a password, 
 
 Once here you can run these 2 mysql commands
 ```
-Execute SET GLOBAL log_output = 'TABLE';
-Execute SET GLOBAL general_log = 'ON';
+SET GLOBAL log_output = 'TABLE';
+SET GLOBAL general_log = 'ON';
 ```
 
 You should use this command to see your log
 
-```select event_time, user_host, CONVERT(argument USING utf8 ) as sqlcommand from mysql.general_log```
+```select event_time, user_host, CONVERT(argument USING utf8 ) as sqlcommand from mysql.general_log;```
 
 A screenshot from out log looks like [this](https://i.imgur.com/z3xejQm.png)!
 
