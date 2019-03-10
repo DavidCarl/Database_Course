@@ -20,7 +20,8 @@ INNER JOIN employees e ON c.salesRepEmployeeNumber = e.employeeNumber
 
 ![](excersice1.png)
 
-The problem with this query would <
+The problem with this query would be that we need to compare a lot of non usefull data, which takes a lot of compute power.
+
 ## Excersise 2
 
 ### Description
