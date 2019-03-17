@@ -127,3 +127,7 @@ Assume we have an index on customerName, and assume a fan-out in the B+ tree of 
 **Draw** a representation of of the B+ tree with index and leaf nodes, as well as the actual table data. The drawing must be a combination of Figure 1.1 and 1.2 from [Anatomy of an SQL index](https://use-the-index-luke.com/sql/anatomy).
 
 ### Answer
+
+This drawing illustrate a B+ tree with a index on our customernumber as its numbers and therefor easy to make a index on.
+
+![](https://i.imgur.com/5MMOcqX.png)
