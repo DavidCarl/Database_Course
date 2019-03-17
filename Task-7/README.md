@@ -56,9 +56,21 @@ Assume we did not include the customerNumber in the table. What could be a key, 
 
 ### Answer
 
+In this case we could treat the customerName as a sort of username, and make it our primary key, but for it to be a primary key we would need it to force unique values. As the customers first and last name is stored elsewhere.  
 Another possibility I think exist in this table could be the phone numbers, as they should be unique. Several companies cannot / should have 1 phone number, but they could have mulitple phone numbers.
 
-// Do the normal form thingy here!
+But the customerName would probably be the safest, as could have multiple instances and not forced to have diferent phonenumbers.
+
+
+* First Normal Form
+    As the table would have a primary key represented and all columns have a single domain, there is no violations.
+
+* Second Normal Form
+    No violations.
+
+* Third Normal Form
+    Due to the relation between our Zip and City fields in our customer and rep part of the table. This violate the Third Normal Form.
+
 
 ## Excersise 3
 
