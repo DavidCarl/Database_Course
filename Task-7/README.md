@@ -71,6 +71,23 @@ Assume the same table as in exercise 2.
 
 ### Answer
 
+This snippet is our safe SQL update method
+
+```
+UPDATE <Table_Name>
+SET repPhone = '87654321'
+WHERE repPhone = '+1 212 555 3000'
+```
+
+This is out unsafe snippet
+
+```
+UPDATE <Table_Name>
+SET repEmail = '87654321@rep.com'
+WHERE customerNumber = '103'
+```
+
+The reason why our safe method works is because it goes in, and find all occurences of that phone number and replace it by the new one. Where our unsafe only find a specific customer and update the phone number there.
 
 
 ## Excersise 4
