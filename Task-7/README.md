@@ -40,10 +40,13 @@ Mention which violation there are to:
 ### Answer
 
 * First Normal Form
-    One I could think of is limiting the users to multiple ex. phonenumbers, but since there is no violation yet its hard to say.
+    When running this query there is no primary key that is represented, so that violates one of the requirements.
 
 * Second Normal Form
-    Depending on if what I pointed out in first normal form is true, then its a violation of the second normal form, since it needs to be compliant with the first normal form.
+    Since the First Normal Form is violated this is also considered violated as its dependent on it!
+
+* Third Normal Form
+    Due to the relation between our Zip and City fields in our customer and rep part of the table. This violate the Third Normal Form aswell as the Second Normal Form not being complaint.
 
 ## Excersise 2
 
