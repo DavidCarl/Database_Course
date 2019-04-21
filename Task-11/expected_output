@@ -1,0 +1,40 @@
+
+DROP IF EXIST MicroShop;
+CREATE DATABASE `MicroShop`;
+
+CREATE TABLE `Product`(
+  id INT AUTO_INCREMENT NOT NULL,
+  name VARCHAR(255) NOT NULL,
+  price INT NOT NULL,
+  PRIMARY KEY (id)
+);
+
+CREATE TABLE `OrderLine`(
+    id INT AUTO_INCREMENT NOT NULL,
+    total INT NOT NULL,
+    count INT NOT NULL,
+    order INT NOT NULL,
+    product INT NOT NULL,
+    FOREIGN KEY (order) REFERENCE Order(id),
+    FOREIGN KEY (product) REFERENCE Product(id),
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE `Order`(
+    id INT AUTO_INCREMENT NOT NULL,
+    date VARCHAR(100) NOT NULL,
+    total INT NOT NULL,
+    customer INT NOT NULL,
+    FOREIGN KEY (customer) REFERENCES Customer(id),
+    PRIMARY KEY (id),
+);
+
+CREATE TABLE `OrderTable`(
+    
+);
+
+CREATE TABLE `Customer`(
+    id INT AUTO_INCREMENT NOT NULL,
+    name VARCHAR(255) NOT NULL,
+    PRIMARY KEY (id)
+);
