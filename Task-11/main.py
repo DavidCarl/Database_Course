@@ -5,7 +5,7 @@ def main():
     data = {}
     with open('test.json', 'r') as f:
         data = json.loads(f.read())
-    #sql(data)
+    sql(data)
     classfile(data)
 
 def classfile(data):
@@ -20,19 +20,15 @@ def classfile(data):
                 if value[0] is '*':
                     par.append(f'{value[1:]}')
                     tmp += f'\t\tself.{value[1:]} = {value[1:]}\n'
-                    #file_ += f'\t{value[1:]} = []\n'
                 elif value == 'String':
                     par.append(f'{key}')
-                    tmp += f'\t\tself.{key} = {key}\n'                    
-                    #file_ += f'\t{key} = \'\'\n'
+                    tmp += f'\t\tself.{key} = {key}\n'
                 elif value == 'Number':
                     par.append(f'{key}')
                     tmp += f'\t\tself.{key} = {key}\n'
-                    #file_ += f'\t{key} = 0\n'
                 else:
                     par.append(f'{key}')
                     tmp += f'\t\tself.{key} = {key}\n'
-                    #file_ += f'\t{key} = None\n'
             for index, each in enumerate(par):
                 if index == (len(par) - 1):
                     file_ += each + '):\n'
